@@ -37,7 +37,7 @@ jobs:
           sed -i '12 r configkey.txt' main2.py
       - name: Test Api
         run: |
-          echo `date +"%Y-%m-%d %H:%M:%S"` begin > time.log
+          echo `date +"%Y-%m-%d %H:%M:%S"` begin >> time.log
           python main2.py
       - name: Delete secrets config #删除机密
         run: |
